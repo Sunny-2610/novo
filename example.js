@@ -3,6 +3,7 @@ const http = require('http');
 const path = require('path');
 const os = require('os');
 const { URL } = require('url'); // ✅ fixed import
+const crypto = require('crypto');
 
 
 // ---------- Read File ----------
@@ -52,11 +53,18 @@ const { URL } = require('url'); // ✅ fixed import
 
 
 // ---------- URL Module (FIXED) ----------
-const myUrl = new URL('http://example.com:8080/path/name?query=hello#hash');
+// const myUrl = new URL('http://example.com:8080/path/name?query=hello#hash');
 
-console.log('Host:', myUrl.host);
-console.log('Hostname:', myUrl.hostname);
-console.log('Port:', myUrl.port);
-console.log('Pathname:', myUrl.pathname);
-console.log('Query:', myUrl.search);
-console.log('Hash:', myUrl.hash);
+// console.log('Host:', myUrl.host);
+// console.log('Hostname:', myUrl.hostname);
+// console.log('Port:', myUrl.port);
+// console.log('Pathname:', myUrl.pathname);
+// console.log('Query:', myUrl.search);
+// console.log('Hash:', myUrl.hash);
+
+
+
+const hash = crypto.createHash('sha256');
+hash.update('hello world');
+
+console.log(hash.digest('hex'))
