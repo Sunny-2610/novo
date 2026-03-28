@@ -1,0 +1,6 @@
+2. Single Threaded & Event Loop
+
+Node.js works on:
+
+Single Thread
+Non-blocking I/O
