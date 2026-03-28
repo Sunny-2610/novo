@@ -1,6 +1,7 @@
 const fs = require('fs')
 const http = require('http')
 const path = require('path')
+const os = require('os')
 
 // fs.readFile('example.txt' , 'utf8' ,(err,data) =>{
 //     if (err) {
@@ -32,7 +33,10 @@ const path = require('path')
 // })
 
 
-const directory = '/user/local'
-const filename = 'example.txt'
-const fullpath = path.join(directory,filename)
-console.log(fullpath)
+// const directory = '/user/local'
+// const filename = 'example.txt'
+// const fullpath = path.join(directory,filename)
+// console.log(fullpath)
+
+// console.log('Platform:', os.platform());
+// console.log('Arch:', os.arch());
