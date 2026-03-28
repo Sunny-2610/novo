@@ -4,6 +4,7 @@ const path = require('path');
 const os = require('os');
 const { URL } = require('url'); // ✅ fixed import
 const crypto = require('crypto');
+const sayHello = require('./greetings');
 
 
 // ---------- Read File ----------
@@ -64,7 +65,11 @@ const crypto = require('crypto');
 
 
 
-const hash = crypto.createHash('sha256');
-hash.update('hello world');
+// const hash = crypto.createHash('sha256');
+// hash.update('hello world');
 
-console.log(hash.digest('hex'))
+// console.log(hash.digest('hex'))
+
+// ---------- Greetings Module ----------
+const message = require('./greetings');
+console.log(message('Sunny'));
