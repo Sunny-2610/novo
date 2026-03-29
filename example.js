@@ -71,5 +71,14 @@ const sayHello = require('./greetings');
 // console.log(hash.digest('hex'))
 
 // ---------- Greetings Module ----------
-const message = require('./greetings');
-console.log(message('Sunny'));
+// const message = require('./greetings');
+// console.log(message('Sunny'));
+
+
+fs.mkdir('newDir', (err) => {
+    if (err) {
+        console.log('Error creating directory:', err);
+        return;
+    }
+    console.log('directory created successfully');
+});
