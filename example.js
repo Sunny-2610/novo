@@ -75,10 +75,19 @@ const sayHello = require('./greetings');
 // console.log(message('Sunny'));
 
 
-fs.mkdir('newDir', (err) => {
-    if (err) {
-        console.log('Error creating directory:', err);
-        return;
-    }
-    console.log('directory created successfully');
-});
+// fs.mkdir('newDir', (err) => {
+//     if (err) {
+//         console.log('Error creating directory:', err);
+//         return;
+//     }
+//     console.log('directory created successfully');
+// });
+ 
+//reading directory
+// fs.readdir('newDir', (err, files) => {
+//     if (err) {
+//         console.log('Error reading directory:', err);
+//         return;
+//     }
+//     console.log(files);
+// });
